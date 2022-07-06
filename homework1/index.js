@@ -2,12 +2,14 @@ const addButton = document.querySelector('button');
 const text = document.getElementById('text');
 const rating = document.getElementById('rating')
 const reviewsElement = document.getElementById('reviews');
+const avgReview = document.getElementById('avgReview');
 
 const reviewsKey = 'reviews';
 
 const reviews = JSON.parse(localStorage.getItem(reviewsKey));
 
 renderReviews(reviews);
+renderAvgReview(reviews);
 
 addButton.addEventListener('click', (event) => {
     reviews.push({
@@ -16,6 +18,7 @@ addButton.addEventListener('click', (event) => {
     })
 
     renderReviews(reviews);
+    renderAvgReview(reviews);
 })
 
 function renderReviews(reviews) {
@@ -41,6 +44,7 @@ function renderReviews(reviews) {
                 reviews.splice(reviewIndex, 1);
 
                 renderReviews(reviews);
+                renderAvgReview(reviews);
             })
 
             reviewsElement.appendChild(listElement);
@@ -57,4 +61,19 @@ function clearReviews() {
 
 function saveReviews(reviews) {
     localStorage.setItem(reviewsKey, JSON.stringify(reviews))
+}
+
+function renderAvgReview(reviews) {
+    var noOfReviews = 0;
+    var totalReview = 0;
+
+    reviews.forEach((review) => {
+        var rating = parseInt(review.rating)
+        noOfReviews++;
+        totalReview = totalReview + rating;
+    })
+
+    var averageReview = totalReview/noOfReviews;
+
+    avgReview.innerHTML = averageReview + '/5'
 }

@@ -1,0 +1,56 @@
+body {
+    background-color: blue;
+    margin: 0;
+}
+
+.main {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.main h1 {
+    color: white;
+}
+
+.white-div {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.white-div img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.white-div div {
+    margin: 20px;
+    margin-top: 40px;
+}
+
+input:first-of-type {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    height: 50px;
+    width: 30%;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    height: 50px;
+    width: 10%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    min-width: 60px;
+}

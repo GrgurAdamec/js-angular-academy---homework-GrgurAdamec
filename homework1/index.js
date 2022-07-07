@@ -64,16 +64,16 @@ function saveReviews(reviews) {
 }
 
 function renderAvgReview(reviews) {
-    var noOfReviews = 0;
-    var totalReview = 0;
+    let noOfReviews = 0;
+    let totalReview = 0;
 
     reviews.forEach((review) => {
-        var rating = parseInt(review.rating)
+        let rating = parseInt(review.rating)
         noOfReviews++;
         totalReview = totalReview + rating;
     })
 
-    var averageReview = totalReview/noOfReviews;
+    let averageReview = totalReview/noOfReviews;
 
     avgReview.innerHTML = averageReview + '/5'
 }

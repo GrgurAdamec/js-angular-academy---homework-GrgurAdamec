@@ -1,0 +1,86 @@
+body {
+    background-color: darkblue;
+    margin: 0;
+}
+
+.main {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.main h1 {
+    color: white;
+}
+
+.white-div {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.white-div h1{
+    color: black;
+}
+
+.white-div img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.white-div div {
+    margin: 20px;
+    margin-top: 40px;
+}
+
+input:first-of-type {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    height: 50px;
+    width: 30%;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    height: 50px;
+    width: 10%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    min-width: 60px;
+}
+
+ul{
+    width: 100%;
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove margins */
+    padding: 0;
+}
+
+ul li{
+    background-color: blue;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    word-break: break-all;
+    /* display: flex; 
+    flex-wrap: wrap;  */
+}
+
+li span {
+    /* flex: 1; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+}

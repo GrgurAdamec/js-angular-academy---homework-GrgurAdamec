@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TV shows app</title>
+</head>
+<body>
+    <div class="main">
+        <h1>TV SHOWS APP</h1>
+        <div class="white-div">
+            <img src="img/endgame.jpg" alt="endgame">
+            <div>
+                <h1>AVENGERS: ENDGAME</h1>
+                <p>Endgame američki je film o superjunacima iz 2019. baziran na Marvel Comics superherojskom timu Avengers. 
+                roducirao ga je Marvel Studios, a distribuirao Walt Disney Studios Motion Pictures, 
+                izravni je nastavak filma Osvetnici: Rat beskonačnosti i 22. film u Marvelovom kinematografskom svemiru.</p>
+                <span id="avgReview"></span>
+            </div>
+        </div>
+
+        <h1>Reviews</h1>
+        <form>
+            <input type="text" id="text" placeholder="Enter your review"/>
+            <input type="number" id="rating" max="5" min="1" placeholder="Add rating" onkeydown="return false"/>
+            <br />
+            <button type="submit">Post</button>
+        </form>
+
+        <ul id="reviews">
+
+        </ul>
+
+        <script src="index.js"></script>
+    </div>
+</body>
+</html>

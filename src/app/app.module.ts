@@ -7,9 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShowsContainerComponent } from './components/shows-container/shows-container.component';
 import { ShowsContainerModule } from './components/shows-container/shows-container.module';
 import { ShowsListComponent } from './components/shows-list/shows-list.component';
+import { ShowCardComponent } from './components/show-card/show-card.component';
 
 @NgModule({
-	declarations: [AppComponent, ShowsContainerComponent, ShowsListComponent],
+	declarations: [AppComponent, ShowsContainerComponent, ShowsListComponent, ShowCardComponent],
 	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ShowsContainerModule],
 	providers: [],
 	bootstrap: [AppComponent],

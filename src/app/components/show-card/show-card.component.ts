@@ -10,7 +10,13 @@ export class ShowCardComponent implements OnInit {
 	constructor() {}
 
 	@Input()
-	show!: Show;
+	image_url!: string | null;
+
+	@Input()
+	average_rating!: number | null;
+
+	@Input()
+	title!: string;
 
 	ngOnInit(): void {
 		console.log('akshd');

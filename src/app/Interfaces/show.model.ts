@@ -3,13 +3,13 @@ import { IShow } from './show.interface';
 export class Show {
 	public title: string;
 	public description: string;
-	public imageUrl: string;
-	public averageRating: number;
+	public image_url: string | null;
+	public average_rating: number | null;
 
 	constructor(show: IShow) {
 		this.title = show.title;
 		this.description = show.description;
-		this.imageUrl = show.imageUrl;
-		this.averageRating = show.averageRating;
+		this.image_url = show.image_url;
+		this.average_rating = show.average_rating;
 	}
 }

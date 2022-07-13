@@ -10,10 +10,10 @@ export class ShowCardComponent implements OnInit {
 	constructor() {}
 
 	@Input()
-	image_url!: string | null;
+	imageUrl!: string | null;
 
 	@Input()
-	average_rating!: number | null;
+	averageRating!: number | null;
 
 	@Input()
 	title!: string;

@@ -14,16 +14,16 @@ export class ShowsContainerComponent implements OnInit {
 		{
 			title: 'avengers',
 			description: 'bla bla',
-			image_url: 'assets/images/avengers.jpg',
-			average_rating: 5,
+			imageUrl: 'assets/images/avengers.jpg',
+			averageRating: 5,
 		},
 		{
 			title: 'thor',
 			description: 'bla bla',
-			image_url: 'assets/images/thor.jpg',
-			average_rating: null,
+			imageUrl: 'assets/images/thor.jpg',
+			averageRating: null,
 		},
-		{ title: 'peacemaker', description: 'bla bla', image_url: null, average_rating: 3 },
+		{ title: 'peacemaker', description: 'bla bla', imageUrl: null, averageRating: 3 },
 	].map((show: IShow) => {
 		return new Show(show);
 	});

@@ -1,0 +1,8 @@
+<div *ngIf="imageUrl"><img [src]="imageUrl" /></div>
+<div *ngIf="!imageUrl"><img src="assets/images/error.jpg" /></div>
+<h2>{{ title }}</h2>
+<br />
+<div *ngIf="averageRating">
+	<span>{{ averageRating }}</span>
+</div>
+<div *ngIf="!averageRating"><span>Rating not available</span></div>

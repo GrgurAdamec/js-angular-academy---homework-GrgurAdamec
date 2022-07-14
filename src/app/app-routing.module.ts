@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { AllShowsComponent } from './pages/all-shows/all-shows.component';
+import { ShowDetailComponent } from './pages/show-detail/show-detail.component';
 import { TopRatedShowsComponent } from './pages/top-rated-shows/top-rated-shows.component';
 
 const routes: Routes = [
@@ -18,14 +19,14 @@ const routes: Routes = [
 				component: TopRatedShowsComponent,
 			},
 			{
-				path: 'top-rated-shows',
-				component: TopRatedShowsComponent,
-			},
-			{
-				path: '**',
-				component: AllShowsComponent,
+				path: 'show-detail/:id',
+				component: ShowDetailComponent,
 			},
 		],
+	},
+	{
+		path: '**',
+		redirectTo: '',
 	},
 ];
 

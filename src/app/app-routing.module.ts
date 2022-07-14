@@ -17,6 +17,10 @@ const routes: Routes = [
 				path: 'top-rated-shows',
 				component: TopRatedShowsComponent,
 			},
+			{
+				path: '**',
+				component: AllShowsComponent,
+			},
 		],
 	},
 ];

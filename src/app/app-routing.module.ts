@@ -18,6 +18,10 @@ const routes: Routes = [
 				component: TopRatedShowsComponent,
 			},
 			{
+				path: 'top-rated-shows',
+				component: TopRatedShowsComponent,
+			},
+			{
 				path: '**',
 				component: AllShowsComponent,
 			},

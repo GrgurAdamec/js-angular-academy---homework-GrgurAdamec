@@ -7,5 +7,14 @@ import { INavigationLink } from 'app/Interfaces/navigation-link.interface';
 	styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
-	public readonly navigationLinks: Array<INavigationLink> = [];
+	public readonly navigationLinks: Array<INavigationLink> = [
+		{
+			url: '',
+			title: 'All Shows',
+		},
+		{
+			url: 'top-rated-shows',
+			title: 'Top rated shows',
+		},
+	];
 }

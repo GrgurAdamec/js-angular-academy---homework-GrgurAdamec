@@ -1,1 +1,3 @@
-<p>navigation works!</p>
+<nav>
+	<button *ngFor="let link of navigationLinks" [routerLink]="link.url">{{ link.title }}</button>
+</nav>

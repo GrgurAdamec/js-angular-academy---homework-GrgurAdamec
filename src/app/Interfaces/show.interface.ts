@@ -3,4 +3,5 @@ export interface IShow {
 	description: string;
 	imageUrl: string | null;
 	averageRating: number | null;
+	id: number;
 }

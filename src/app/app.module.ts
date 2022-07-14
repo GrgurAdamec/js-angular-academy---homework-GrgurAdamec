@@ -9,10 +9,23 @@ import { ShowsContainerModule } from './components/shows-container/shows-contain
 import { ShowsListComponent } from './components/shows-list/shows-list.component';
 import { ShowCardComponent } from './components/show-card/show-card.component';
 import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
+import { ShowsService } from './services/show-services/shows.service';
+import { AllShowsModule } from './pages/all-shows/all-shows.module';
+import { TopRatedShowsModule } from './pages/top-rated-shows/top-rated-shows.module';
+import { ShowDetailModule } from './pages/show-detail/show-detail.module';
 
 @NgModule({
-	declarations: [AppComponent, ShowsContainerComponent, ShowsListComponent, ShowCardComponent],
-	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ShowsContainerModule, MainLayoutModule],
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		ShowsContainerModule,
+		MainLayoutModule,
+		AllShowsModule,
+		TopRatedShowsModule,
+		ShowDetailModule,
+	],
 	providers: [],
 	bootstrap: [AppComponent],
 })

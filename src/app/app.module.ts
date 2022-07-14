@@ -8,10 +8,11 @@ import { ShowsContainerComponent } from './components/shows-container/shows-cont
 import { ShowsContainerModule } from './components/shows-container/shows-container.module';
 import { ShowsListComponent } from './components/shows-list/shows-list.component';
 import { ShowCardComponent } from './components/show-card/show-card.component';
+import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
 
 @NgModule({
 	declarations: [AppComponent, ShowsContainerComponent, ShowsListComponent, ShowCardComponent],
-	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ShowsContainerModule],
+	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ShowsContainerModule, MainLayoutModule],
 	providers: [],
 	bootstrap: [AppComponent],
 })

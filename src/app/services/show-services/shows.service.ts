@@ -21,7 +21,35 @@ export class ShowsService {
 			averageRating: null,
 			id: 2,
 		},
-		{ title: 'peacemaker', description: 'bla bla', imageUrl: null, averageRating: 3, id: 3 },
+		{
+			title: 'peacemaker',
+			description: 'bla bla',
+			imageUrl: 'assets/images/peacemaker.jpg',
+			averageRating: 3,
+			id: 3,
+		},
+		{
+			title: 'black panther',
+			description: 'bla bla',
+			imageUrl: 'assets/images/panther.jpg',
+			averageRating: 2,
+			id: 4,
+		},
+		{ title: 'black widow', description: 'bla bla', imageUrl: 'assets/images/widow.jpg', averageRating: 3, id: 5 },
+		{
+			title: 'captain america',
+			description: 'bla bla',
+			imageUrl: 'assets/images/america.jpg',
+			averageRating: 4.2,
+			id: 6,
+		},
+		{
+			title: 'captain marvel',
+			description: 'bla bla',
+			imageUrl: 'assets/images/marvel.jpg',
+			averageRating: 4.1,
+			id: 7,
+		},
 	].map((show: IShow) => {
 		return new Show(show);
 	});

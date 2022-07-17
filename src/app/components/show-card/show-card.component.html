@@ -1,7 +1,7 @@
 <mat-card>
 	<div *ngIf="imageUrl"><img [src]="imageUrl" /></div>
 	<div *ngIf="!imageUrl"><img src="assets/images/error.jpg" /></div>
-	<h2>{{ title }}</h2>
+	<mat-card-title>{{ title }}</mat-card-title>
 	<br />
 	<div *ngIf="averageRating">
 		<span>{{ averageRating }}</span>

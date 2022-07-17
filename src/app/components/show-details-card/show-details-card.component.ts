@@ -8,5 +8,5 @@ import { Show } from 'app/Interfaces/show.model';
 })
 export class ShowDetailsCardComponent {
 	@Input()
-	shows: Array<Show> = [];
+	show!: Show | undefined;
 }

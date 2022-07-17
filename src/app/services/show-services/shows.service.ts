@@ -63,4 +63,11 @@ export class ShowsService {
 			return show.averageRating && show.averageRating >= 4;
 		});
 	}
+
+	public getShowById(id: number): Show | undefined {
+		console.log(id);
+		return this.shows.find((show: Show) => {
+			return show.id == id;
+		});
+	}
 }

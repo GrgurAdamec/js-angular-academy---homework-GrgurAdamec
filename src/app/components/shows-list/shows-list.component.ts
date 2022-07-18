@@ -7,13 +7,9 @@ import { Observable } from 'rxjs';
 	templateUrl: './shows-list.component.html',
 	styleUrls: ['./shows-list.component.scss'],
 })
-export class ShowsListComponent implements OnInit {
+export class ShowsListComponent {
 	constructor() {}
 
 	@Input()
 	shows: Show[] | null = [];
-
-	ngOnInit(): void {
-		console.log('jnsad');
-	}
 }

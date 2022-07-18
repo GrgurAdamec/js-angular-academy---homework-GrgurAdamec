@@ -113,7 +113,7 @@ export class ShowsService {
 		return this.getShows().pipe(
 			map((shows) => {
 				return shows.find((show) => {
-					return show.id === id;
+					return show.id == id;
 				});
 			}),
 		);

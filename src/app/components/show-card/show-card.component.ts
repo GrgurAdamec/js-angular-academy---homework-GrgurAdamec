@@ -6,7 +6,7 @@ import { Show } from 'app/Interfaces/show.model';
 	templateUrl: './show-card.component.html',
 	styleUrls: ['./show-card.component.scss'],
 })
-export class ShowCardComponent implements OnInit {
+export class ShowCardComponent {
 	constructor() {}
 
 	@Input()
@@ -20,8 +20,4 @@ export class ShowCardComponent implements OnInit {
 
 	@Input()
 	id!: number;
-
-	ngOnInit(): void {
-		console.log('show card ts');
-	}
 }

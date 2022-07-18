@@ -20,9 +20,4 @@ export class ShowDetailComponent {
 	}
 
 	public show$: Observable<Show | undefined>;
-
-	// ngOnInit() {
-	// 	this.show = this.showsService.getShowById(this.id);
-	// 	console.log(this.show);
-	// }
 }

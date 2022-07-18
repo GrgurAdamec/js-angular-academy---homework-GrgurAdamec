@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Show } from 'app/Interfaces/show.model';
+import { Observable } from 'rxjs';
 
 @Component({
 	selector: 'app-shows-list',
@@ -10,7 +11,7 @@ export class ShowsListComponent implements OnInit {
 	constructor() {}
 
 	@Input()
-	shows: Array<Show> = [];
+	shows: Show[] = [];
 
 	ngOnInit(): void {
 		console.log('jnsad');

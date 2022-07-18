@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="details">
 	<div *ngIf="show?.imageUrl"><img [src]="show?.imageUrl" /></div>
 	<mat-card-title>{{ show?.title }}</mat-card-title>
 	<br />
@@ -8,3 +8,12 @@
 	</div>
 	<div *ngIf="!show?.averageRating"><span>Rating not available</span></div>
 </mat-card>
+
+<mat-card-title>Reviews</mat-card-title>
+<div *ngFor="let review of show?.reviews">
+	<mat-card class="reviews">
+		<span>Rating: {{ review.rating }}</span>
+		<br />
+		<span>Review: {{ review.text }}</span>
+	</mat-card>
+</div>

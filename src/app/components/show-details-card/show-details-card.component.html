@@ -1,0 +1,10 @@
+<mat-card>
+	<div *ngIf="show?.imageUrl"><img [src]="show?.imageUrl" /></div>
+	<mat-card-title>{{ show?.title }}</mat-card-title>
+	<br />
+	<p>{{ show?.description }}</p>
+	<div *ngIf="show?.averageRating">
+		<span>{{ show?.averageRating }}</span>
+	</div>
+	<div *ngIf="!show?.averageRating"><span>Rating not available</span></div>
+</mat-card>

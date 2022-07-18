@@ -18,7 +18,10 @@ export class ShowCardComponent implements OnInit {
 	@Input()
 	title!: string;
 
+	@Input()
+	id!: number;
+
 	ngOnInit(): void {
-		console.log('akshd');
+		console.log('show card ts');
 	}
 }

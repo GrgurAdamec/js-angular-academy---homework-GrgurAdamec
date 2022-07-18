@@ -1,0 +1,10 @@
+<nav>
+	<button
+		*ngFor="let link of navigationLinks"
+		[routerLink]="link.url"
+		[routerLinkActive]="'active'"
+		[routerLinkActiveOptions]="{ exact: true }"
+	>
+		{{ link.title }}
+	</button>
+</nav>

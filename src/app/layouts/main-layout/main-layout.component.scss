@@ -1,0 +1,27 @@
+header {
+    background-color: lightblue;
+}
+
+.centered {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav{
+    background-color: lightblue;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav h1{
+    margin-bottom: 0;
+}
+
+.main {
+    background-color: lightgray;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+}

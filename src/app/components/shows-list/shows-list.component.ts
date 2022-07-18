@@ -11,7 +11,7 @@ export class ShowsListComponent implements OnInit {
 	constructor() {}
 
 	@Input()
-	shows: Show[] = [];
+	shows: Show[] | null = [];
 
 	ngOnInit(): void {
 		console.log('jnsad');

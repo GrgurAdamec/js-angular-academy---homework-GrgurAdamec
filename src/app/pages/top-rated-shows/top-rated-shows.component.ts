@@ -10,5 +10,5 @@ import { ShowsService } from 'app/services/show-services/shows.service';
 export class TopRatedShowsComponent {
 	constructor(private readonly showsService: ShowsService) {}
 
-	public shows: Array<Show> = this.showsService.getTopRatedShows();
+	public shows$ = this.showsService.getTopRatedShows();
 }

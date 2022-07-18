@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { IShow } from 'app/Interfaces/show.interface';
 import { Show } from 'app/Interfaces/show.model';
 import { Observable } from 'rxjs/internal/Observable';
-import { of } from 'rxjs';
+import { delay, filter, map, of } from 'rxjs';
 
 @Injectable({
 	providedIn: 'root',
@@ -93,24 +93,29 @@ export class ShowsService {
 		return new Show(show);
 	});
 
-	// public getShows(): Observable<Array<Show>> {
-	// 	return of(this.shows);
+	public getShows(): Observable<Array<Show>> {
+		return of(this.shows).pipe(delay(200));
+	}
+
+	// public getShows(): Array<Show> {
+	// 	return this.shows;
 	// }
 
-	public getShows(): Array<Show> {
-		return this.shows;
+	public getTopRatedShows(): Observable<Array<Show>> {
+		return of(
+			this.shows.filter((show: Show) => {
+				return show.averageRating && show.averageRating >= 4;
+			}),
+		).pipe(delay(100));
 	}
 
-	public getTopRatedShows(): Array<Show> {
-		return this.shows.filter((show: Show) => {
-			return show.averageRating && show.averageRating >= 4;
-		});
-	}
-
-	public getShowById(id: number): Show | undefined {
-		console.log(id);
-		return this.shows.find((show: Show) => {
-			return show.id == id;
-		});
+	public getShowById(id: number): Observable<Show | undefined> {
+		return this.getShows().pipe(
+			map((shows) => {
+				return shows.find((show) => {
+					return show.id === id;
+				});
+			}),
+		);
 	}
 }

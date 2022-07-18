@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Show } from 'app/Interfaces/show.model';
+import { Component } from '@angular/core';
 import { ShowsService } from 'app/services/show-services/shows.service';
 
 @Component({
@@ -7,12 +6,8 @@ import { ShowsService } from 'app/services/show-services/shows.service';
 	templateUrl: './all-shows.component.html',
 	styleUrls: ['./all-shows.component.scss'],
 })
-export class AllShowsComponent implements OnInit {
+export class AllShowsComponent {
 	constructor(private readonly showsService: ShowsService) {}
 
-	public shows: Array<Show> = this.showsService.getShows();
-
-	ngOnInit() {
-		console.log('AllShowsComponent');
-	}
+	public shows$ = this.showsService.getShows();
 }

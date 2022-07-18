@@ -16,12 +16,13 @@ export class ShowDetailComponent {
 		// const _id: Observable<number> = route.params.pipe(map(p => p['id']));
 		// _id.subscribe(x => this.id = x);
 		this.id = route.snapshot.params['id'];
+		this.show$ = this.showsService.getShowById(this.id);
 	}
 
-	public show: Show | undefined;
+	public show$: Observable<Show | undefined>;
 
-	ngOnInit() {
-		this.show = this.showsService.getShowById(this.id);
-		console.log(this.show);
-	}
+	// ngOnInit() {
+	// 	this.show = this.showsService.getShowById(this.id);
+	// 	console.log(this.show);
+	// }
 }

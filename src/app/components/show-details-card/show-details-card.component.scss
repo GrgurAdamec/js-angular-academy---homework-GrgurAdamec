@@ -5,8 +5,15 @@ img {
     margin-bottom: 20px;
 }
 
-mat-card {
+.details {
     height: 700px;
     border-radius: 24px;
-    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.reviews {
+    min-height: 100px;
+    border-radius: 24px;
+    margin-top: 30px;
+    background-color: lightcyan;
 }

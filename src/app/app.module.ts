@@ -9,6 +9,9 @@ import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
 import { AllShowsModule } from './pages/all-shows/all-shows.module';
 import { TopRatedShowsModule } from './pages/top-rated-shows/top-rated-shows.module';
 import { ShowDetailModule } from './pages/show-detail/show-detail.module';
+import { AuthLayoutModule } from './layouts/auth-layout/auth-layout.module';
+import { LoginModule } from './pages/login/login.module';
+import { RegisterModule } from './pages/register/register.module';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -21,6 +24,9 @@ import { ShowDetailModule } from './pages/show-detail/show-detail.module';
 		AllShowsModule,
 		TopRatedShowsModule,
 		ShowDetailModule,
+		AuthLayoutModule,
+		LoginModule,
+		RegisterModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

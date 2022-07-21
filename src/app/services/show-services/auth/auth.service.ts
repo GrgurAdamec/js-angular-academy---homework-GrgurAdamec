@@ -17,6 +17,6 @@ export class AuthService {
 
 	public login(data: IAuthFormData): Observable<IUser> {
 		console.log(data);
-		return this.http.post<IUser>('https://tv-shows.infinum.academy/sign_in', data);
+		return this.http.post<IUser>('https://tv-shows.infinum.academy/users/sign_in', data);
 	}
 }

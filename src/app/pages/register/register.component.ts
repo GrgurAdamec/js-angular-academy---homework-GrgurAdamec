@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { IAuthFormData } from 'app/Interfaces/auth-form-data.interface';
+import { AuthService } from 'app/services/show-services/auth/auth.service';
 import { CustomValidators } from 'app/Validators/CustomValidators';
 
 @Component({
@@ -12,24 +14,24 @@ export class RegisterComponent {
 		{
 			email: new FormControl('', [Validators.required, Validators.email]),
 			password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-			password2: new FormControl('', [Validators.required]),
+			password_confirmation: new FormControl('', [Validators.required]),
 		},
 		{
-			validators: this.checkPassword('password', 'password2'),
+			validators: CustomValidators.checkPassword('password', 'password_confirmation'),
 		},
 	);
 
-	checkPassword(password1: string, password2: string): ValidatorFn {
-		return (control: AbstractControl): ValidationErrors | null => {
-			const pass1 = control.get(password1);
-			const pass2 = control.get(password2);
-
-			return pass1 && pass2 && pass1.value !== pass2.value ? { mismatch: true } : null;
-		};
-	}
+	constructor(private readonly authService: AuthService) {}
 
 	public onRegisterClick(event: Event) {
 		event.preventDefault();
-		console.log(this.form.value);
+
+		this.authService
+			.register({
+				email: this.form.controls.email.value,
+				password: this.form.controls.password.value,
+				password_confirmation: this.form.controls.password_confirmation.value,
+			} as IAuthFormData)
+			.subscribe();
 	}
 }

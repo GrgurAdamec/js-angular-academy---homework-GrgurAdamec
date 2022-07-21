@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IAuthFormData } from 'app/Interfaces/auth-form-data.interface';
 import { AuthService } from 'app/services/show-services/auth/auth.service';
 import { CustomValidators } from 'app/Validators/CustomValidators';
@@ -21,7 +22,7 @@ export class RegisterComponent {
 		},
 	);
 
-	constructor(private readonly authService: AuthService) {}
+	constructor(private readonly authService: AuthService, private readonly router: Router) {}
 
 	public onRegisterClick(event: Event) {
 		event.preventDefault();
@@ -32,6 +33,8 @@ export class RegisterComponent {
 				password: this.form.controls.password.value,
 				password_confirmation: this.form.controls.password_confirmation.value,
 			} as IAuthFormData)
-			.subscribe();
+			.subscribe(() => {
+				this.router.navigate(['']);
+			});
 	}
 }

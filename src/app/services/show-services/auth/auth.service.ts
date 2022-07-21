@@ -12,6 +12,11 @@ export class AuthService {
 
 	public register(data: IAuthFormData): Observable<IUser> {
 		console.log(data);
-		return this.http.post<IUser>('https://tv-shows.infinum.academy/users', data, { withCredentials: true });
+		return this.http.post<IUser>('https://tv-shows.infinum.academy/users', data);
+	}
+
+	public login(data: IAuthFormData): Observable<IUser> {
+		console.log(data);
+		return this.http.post<IUser>('https://tv-shows.infinum.academy/sign_in', data);
 	}
 }

@@ -16,5 +16,13 @@ export class NavigationComponent {
 			url: 'top-rated-shows',
 			title: 'Top rated shows',
 		},
+		{
+			url: 'login',
+			title: 'Login',
+		},
+		{
+			url: 'register',
+			title: 'Register',
+		},
 	];
 }

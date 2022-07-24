@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
-import { IAuthFormData } from 'app/Interfaces/auth-form-data.interface';
+import { ILoginFormData } from 'app/Interfaces/login-form-data.interface';
+import { IRegisterFormData } from 'app/Interfaces/register-form-data.interface';
 import { AuthService } from 'app/services/show-services/auth/auth.service';
 
 @Component({
@@ -25,7 +26,7 @@ export class LoginComponent {
 				email: this.form.controls.email.value,
 				password: this.form.controls.password.value,
 				//password_confirmation: this.form.controls.password_confirmation.value,
-			} as IAuthFormData)
+			} as ILoginFormData)
 			.subscribe(() => {
 				this.router.navigate(['']);
 			});

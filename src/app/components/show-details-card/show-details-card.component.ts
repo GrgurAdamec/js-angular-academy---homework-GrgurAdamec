@@ -7,7 +7,7 @@ import { AuthService } from 'app/services/show-services/auth/auth.service';
 	templateUrl: './show-details-card.component.html',
 	styleUrls: ['./show-details-card.component.scss'],
 })
-export class ShowDetailsCardComponent {
+export class ShowDetailsCardComponent implements OnInit {
 	@Input()
 	show!: Show | undefined;
 

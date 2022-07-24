@@ -9,6 +9,8 @@
     float: left;
 }
 
-// .container img {
-//     width: 100%;
-// }
+:host{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

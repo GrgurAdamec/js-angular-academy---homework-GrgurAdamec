@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ReviewService } from 'app/services/show-services/review.service';
 
 @Component({
 	selector: 'app-review-form',
@@ -7,6 +8,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 	styleUrls: ['./review-form.component.scss'],
 })
 export class ReviewFormComponent {
+	constructor(private readonly reviewService: ReviewService) {}
+
 	public form = new FormGroup({
 		review: new FormControl('', [Validators.required]),
 		rating: new FormControl('', [Validators.required]),
@@ -14,6 +17,8 @@ export class ReviewFormComponent {
 
 	public onPostReviewClick(event: Event) {
 		event.preventDefault();
-		console.log(this.form);
+		// console.log('Review: ' + this.form.controls.review.value);
+		// console.log('Rating: ' + this.form.controls.rating.value);
+		this.reviewService.saveReview(this.form.controls.review.value, this.form.controls.rating.value);
 	}
 }

@@ -18,6 +18,16 @@ export class AuthService {
 
 	public login(data: ILoginFormData): Observable<IUser> {
 		console.log(data);
+		console.log(this.http.post<IUser>('https://tv-shows.infinum.academy/users', data));
 		return this.http.post<IUser>('https://tv-shows.infinum.academy/users/sign_in', data);
+	}
+
+	public isLoggedIn(): boolean {
+		return !!localStorage.getItem('userId');
+	}
+
+	public logOut() {
+		localStorage.removeItem('userId');
+		localStorage.removeItem('userEmail');
 	}
 }

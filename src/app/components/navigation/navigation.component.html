@@ -1,4 +1,16 @@
-<nav>
+<nav *ngIf="authService.isLoggedIn()">
+	<button
+		*ngFor="let link of navigationLinksLoggedIn"
+		[routerLink]="link.url"
+		[routerLinkActive]="'active'"
+		[routerLinkActiveOptions]="{ exact: true }"
+	>
+		{{ link.title }}
+	</button>
+	<button (click)="authService.logOut()">Log out</button>
+</nav>
+
+<nav *ngIf="!authService.isLoggedIn()">
 	<button
 		*ngFor="let link of navigationLinks"
 		[routerLink]="link.url"

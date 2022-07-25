@@ -14,7 +14,6 @@ export class LoginComponent {
 	public form = new FormGroup({
 		email: new FormControl('', [Validators.required, Validators.email]),
 		password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-		//password_confirmation: new FormControl(''),
 	});
 
 	constructor(private readonly authService: AuthService, private readonly router: Router) {}
@@ -25,9 +24,14 @@ export class LoginComponent {
 			.login({
 				email: this.form.controls.email.value,
 				password: this.form.controls.password.value,
-				//password_confirmation: this.form.controls.password_confirmation.value,
 			} as ILoginFormData)
-			.subscribe(() => {
+			.subscribe((res) => {
+				console.log(res);
+				console.log(res.user.email);
+				console.log(res.user.id);
+
+				localStorage.setItem('userId', res.user.id);
+				localStorage.setItem('userEmail', res.user.email);
 				this.router.navigate(['']);
 			});
 	}

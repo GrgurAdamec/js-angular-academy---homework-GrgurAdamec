@@ -1,24 +1,26 @@
-<form [formGroup]="form">
-	<mat-card>
-		<mat-card-title>Log in</mat-card-title>
+<div class="wrap">
+	<form [formGroup]="form">
+		<mat-card>
+			<mat-card-title>Log in</mat-card-title>
 
-		<mat-card-actions>
-			<app-login-form [form]="form"></app-login-form>
+			<mat-card-actions>
+				<app-login-form [form]="form"></app-login-form>
 
-			<p>
-				Not a mamber?
-				<a [routerLink]="'/register'">Register here!</a>
-			</p>
+				<button
+					type="submit"
+					mat-raised-button
+					color="primary"
+					[disabled]="form.invalid"
+					(click)="onLoginCLick($event)"
+				>
+					Log in
+				</button>
 
-			<button
-				type="submit"
-				mat-raised-button
-				color="primary"
-				[disabled]="form.invalid"
-				(click)="onLoginCLick($event)"
-			>
-				Log in
-			</button>
-		</mat-card-actions>
-	</mat-card>
-</form>
+				<p>
+					Not a mamber?
+					<a [routerLink]="'/register'">Register here!</a>
+				</p>
+			</mat-card-actions>
+		</mat-card>
+	</form>
+</div>

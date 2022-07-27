@@ -1,28 +1,19 @@
-header {
-    background-color: lightblue;
-}
-
-.centered {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.nav{
-    background-color: lightblue;
+mat-sidenav {
+    width: 20%;
     padding: 20px;
+}
+
+mat-sidenav-container {
+    background-color: #1b004c;
+}
+
+mat-sidenav-content{
+    background-color: #1b004c;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
-.nav h1{
-    margin-bottom: 0;
+img {
+    margin: 20px;
+    margin-bottom: 50px;
 }
-
-.main {
-    background-color: lightgray;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-

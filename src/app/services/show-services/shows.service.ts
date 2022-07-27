@@ -89,6 +89,28 @@ export class ShowsService {
 				{ text: 'All around me are familiar faces', rating: 4, id: 2 },
 			],
 		},
+		{
+			title: 'captain marvel 2',
+			description: 'bla bla',
+			imageUrl: null,
+			averageRating: 4.5,
+			id: 8,
+			reviews: [
+				{ text: 'Odličan film, kao tup gun ali sa ženskom glumicom', rating: 5, id: 1 },
+				{ text: 'All around me are familiar faces', rating: 4, id: 2 },
+			],
+		},
+		{
+			title: 'captain marvel 3',
+			description: 'bla bla',
+			imageUrl: null,
+			averageRating: 4.5,
+			id: 9,
+			reviews: [
+				{ text: 'Odličan film, kao tup gun ali sa ženskom glumicom', rating: 5, id: 1 },
+				{ text: 'All around me are familiar faces', rating: 4, id: 2 },
+			],
+		},
 	].map((show: IShow) => {
 		return new Show(show);
 	});

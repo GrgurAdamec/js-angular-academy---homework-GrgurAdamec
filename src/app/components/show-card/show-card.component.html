@@ -1,12 +1,11 @@
 <a href="show-detail/{{ id }}">
 	<mat-card>
-		<div *ngIf="imageUrl"><img [src]="imageUrl" /></div>
-		<div *ngIf="!imageUrl"><img src="assets/images/error.jpg" /></div>
+		<div *ngIf="imageUrl"><img [src]="imageUrl" class="show-image" /></div>
+		<div *ngIf="!imageUrl"><img src="assets/images/error.jpg" class="show-image" /></div>
 		<mat-card-title>{{ title }}</mat-card-title>
-		<br />
-		<div *ngIf="averageRating">
-			<span>{{ averageRating }}</span>
+		<div *ngIf="averageRating" class="inline">
+			<span class="rating"><img src="../../assets/images/Vector.png" /> {{ averageRating }}/5</span>
 		</div>
-		<div *ngIf="!averageRating"><span>Rating not available</span></div>
+		<div *ngIf="!averageRating"><span class="rating">Rating not available</span></div>
 	</mat-card>
 </a>

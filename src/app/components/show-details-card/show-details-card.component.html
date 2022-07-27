@@ -1,23 +1,34 @@
 <mat-card class="show-card">
-	<div *ngIf="show?.imageUrl"><img [src]="show?.imageUrl" /></div>
-	<mat-card-title>{{ show?.title }}</mat-card-title>
-	<br />
-	<p>{{ show?.description }}</p>
-	<div *ngIf="show?.averageRating">
-		<span>{{ show?.averageRating }}</span>
+	<div *ngIf="show?.imageUrl" class="img-div"><img [src]="show?.imageUrl" class="show-img" /></div>
+	<div class="half-div">
+		<mat-card-title>{{ show?.title }}</mat-card-title>
+		<br />
+		<div *ngIf="show?.averageRating">
+			<span><img src="../../assets/images/Vector.png" /> {{ show?.averageRating }}/5</span>
+		</div>
+		<div *ngIf="!show?.averageRating"><span>Rating not available</span></div>
 	</div>
-	<div *ngIf="!show?.averageRating"><span>Rating not available</span></div>
+	<div class="half-div">
+		<p>{{ show?.description }}</p>
+	</div>
 </mat-card>
 
-<mat-card-title>Reviews</mat-card-title>
-<div *ngFor="let review of show?.reviews">
-	<mat-card class="reviews">
-		<span>Rating: {{ review.rating }}</span>
-		<br />
-		<span>Review: {{ review.text }}</span>
-	</mat-card>
-</div>
+<mat-sidenav-container>
+	<mat-sidenav mode="side" opened>
+		<p>Reviews</p>
+	</mat-sidenav>
 
-<div class="reviews" *ngIf="authService.isLoggedIn()">
-	<app-review-form></app-review-form>
-</div>
+	<mat-sidenav-content>
+		<div class="review-form" *ngIf="authService.isLoggedIn()">
+			<app-review-form></app-review-form>
+		</div>
+
+		<div *ngFor="let review of show?.reviews">
+			<mat-card class="reviews">
+				<span class="half-span">Rating: {{ review.rating }}</span>
+				<br />
+				<span class="half-span">Review: {{ review.text }}</span>
+			</mat-card>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>

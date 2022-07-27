@@ -1,5 +1,19 @@
 mat-form-field {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 388px;
+  //border: 1px white solid;
+  border-radius: 40px;
+}
+
+mat-card-actions {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: black;
+}
+
+mat-card {
+text-align: center;
+}

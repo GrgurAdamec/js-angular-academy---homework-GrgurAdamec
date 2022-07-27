@@ -1,20 +1,22 @@
 <div class="wrap">
 	<form [formGroup]="form">
 		<mat-card>
-			<mat-card-title>Log in</mat-card-title>
+			<mat-card-title><img src="../../../assets/images/Logo.png" /></mat-card-title>
 
 			<mat-card-actions>
 				<app-login-form [form]="form"></app-login-form>
 
-				<button
-					type="submit"
-					mat-raised-button
-					color="primary"
-					[disabled]="form.invalid"
-					(click)="onLoginCLick($event)"
-				>
-					Log in
-				</button>
+				<div class="button">
+					<button
+						type="submit"
+						mat-raised-button
+						color="primary"
+						[disabled]="form.invalid"
+						(click)="onLoginCLick($event)"
+					>
+						Log in
+					</button>
+				</div>
 
 				<p>
 					Not a mamber?

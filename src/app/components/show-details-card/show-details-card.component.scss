@@ -1,13 +1,35 @@
 .show-card {
+    min-width: 100%;
     padding: 0px;
     background-color: white;
     color: black;
     height: 610px;
     border-radius: 24px;
-    margin-bottom: 50px;
+    margin: 50px;
 }
 
-img {
+.half-div {
+    width: 50%;
+    float: left;
+    color: #371687;
+
+    mat-card-title {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    span {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    p{
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+}
+
+.show-img {
     width: 100%;
     border-radius: 24px 24px 0 0;
     max-height: 400px;
@@ -18,5 +40,26 @@ img {
     min-height: 100px;
     border-radius: 24px;
     margin-top: 30px;
-    background-color: lightcyan;
+    background-color: #371687;
+}
+
+mat-sidenav-container {
+    margin-left: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+mat-sidenav {
+    width: 20%;
+    margin-top: 50px;
+}
+
+app-review-form {
+    background-color: black;
+    border-radius: 30px;
+}
+
+.half-span {
+    width: 40%;
+    float: left;
 }

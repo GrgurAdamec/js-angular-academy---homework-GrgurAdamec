@@ -25,9 +25,16 @@
 
 		<div *ngFor="let review of show?.reviews">
 			<mat-card class="reviews">
-				<span class="half-span">Rating: {{ review.rating }}</span>
-				<br />
-				<span class="half-span">Review: {{ review.text }}</span>
+				<div class="photo"><img src="../../../assets/images/error.jpg" /></div>
+
+				<div class="rating">
+					<p>email@example.com</p>
+					<span class="half-span"> {{ review.rating }}</span>
+				</div>
+
+				<div class="text">
+					<span class="half-span">{{ review.text }}</span>
+				</div>
 			</mat-card>
 		</div>
 	</mat-sidenav-content>

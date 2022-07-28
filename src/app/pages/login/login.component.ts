@@ -30,8 +30,8 @@ export class LoginComponent {
 				console.log(res.user.email);
 				console.log(res.user.id);
 
-				localStorage.setItem('userId', res.user.id);
-				localStorage.setItem('userEmail', res.user.email);
+				sessionStorage.setItem('userId', res.user.id);
+				sessionStorage.setItem('userEmail', res.user.email);
 				this.router.navigate(['']);
 			});
 	}

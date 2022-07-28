@@ -33,6 +33,6 @@ export class ReviewService {
 	}
 
 	public getEmail(): string | null {
-		return localStorage.getItem('userEmail');
+		return sessionStorage.getItem('userEmail');
 	}
 }

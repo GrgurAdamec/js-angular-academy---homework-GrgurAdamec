@@ -15,10 +15,10 @@ export class ShowsService {
 			imageUrl: 'assets/images/avengers.jpg',
 			averageRating: 5,
 			id: 1,
-			reviews: [
-				{ text: 'Odlican, vrlo dobar, najbolji', rating: 5, id: 1 },
-				{ text: 'Avengers woo', rating: 5, id: 2 },
-			],
+			// reviews: [
+			// 	{ text: 'Odlican, vrlo dobar, najbolji', rating: 5, id: 1 },
+			// 	{ text: 'Avengers woo', rating: 5, id: 2 },
+			// ],
 		},
 		{
 			title: 'thor',
@@ -27,7 +27,7 @@ export class ShowsService {
 			averageRating: null,
 			id: 2,
 			// reviews: [{text: 'bla', rating: 3, id: 1}, {text: 'kmačcx', rating: 5, id: 2}],
-			reviews: null,
+			// reviews: null,
 		},
 		{
 			title: 'peacemaker',
@@ -35,10 +35,10 @@ export class ShowsService {
 			imageUrl: 'assets/images/peacemaker.jpg',
 			averageRating: 3,
 			id: 3,
-			reviews: [
-				{ text: 'A oke je', rating: 2, id: 1 },
-				{ text: 'Peacemaker je dosta dobar uživio sam se u film bravo svaka čast', rating: 4, id: 2 },
-			],
+			// reviews: [
+			// 	{ text: 'A oke je', rating: 2, id: 1 },
+			// 	{ text: 'Peacemaker je dosta dobar uživio sam se u film bravo svaka čast', rating: 4, id: 2 },
+			// ],
 		},
 		{
 			title: 'black panther',
@@ -46,10 +46,10 @@ export class ShowsService {
 			imageUrl: 'assets/images/panther.jpg',
 			averageRating: 2,
 			id: 4,
-			reviews: [
-				{ text: 'Nije mi se svidio', rating: 1, id: 1 },
-				{ text: 'Mislio sam da je film od panterama a ne o superherojima, razočaran', rating: 3, id: 2 },
-			],
+			// reviews: [
+			// 	{ text: 'Nije mi se svidio', rating: 1, id: 1 },
+			// 	{ text: 'Mislio sam da je film od panterama a ne o superherojima, razočaran', rating: 3, id: 2 },
+			// ],
 		},
 		{
 			title: 'black widow',
@@ -57,10 +57,10 @@ export class ShowsService {
 			imageUrl: 'assets/images/widow.jpg',
 			averageRating: 3,
 			id: 5,
-			reviews: [
-				{ text: 'Autentično osrednji', rating: 3, id: 1 },
-				{ text: 'Marko mi je rekao da mu je dobar film ali meni nije', rating: 3, id: 2 },
-			],
+			// reviews: [
+			// 	{ text: 'Autentično osrednji', rating: 3, id: 1 },
+			// 	{ text: 'Marko mi je rekao da mu je dobar film ali meni nije', rating: 3, id: 2 },
+			// ],
 		},
 		{
 			title: 'captain america',
@@ -68,15 +68,15 @@ export class ShowsService {
 			imageUrl: 'assets/images/america.jpg',
 			averageRating: 4.2,
 			id: 6,
-			reviews: [
-				{ text: 'Hmmmmmmmmm', rating: 4, id: 1 },
-				{
-					text: 'Naj bolji, potsječa me na fašnik kada sam bijo mali i maskirao se u kapetana ameriku jel mi je naj draži super  heroj',
-					rating: 5,
-					id: 2,
-				},
-				{ text: 'Komentiram samo zato da kažem koliko su ljudi nepismeni, inače dobar film', rating: 5, id: 2 },
-			],
+			// reviews: [
+			// 	{ text: 'Hmmmmmmmmm', rating: 4, id: 1 },
+			// 	{
+			// 		text: 'Naj bolji, potsječa me na fašnik kada sam bijo mali i maskirao se u kapetana ameriku jel mi je naj draži super  heroj',
+			// 		rating: 5,
+			// 		id: 2,
+			// 	},
+			// 	{ text: 'Komentiram samo zato da kažem koliko su ljudi nepismeni, inače dobar film', rating: 5, id: 2 },
+			// ],
 		},
 		{
 			title: 'captain marvel',
@@ -84,10 +84,10 @@ export class ShowsService {
 			imageUrl: 'assets/images/marvel.jpg',
 			averageRating: 4.5,
 			id: 7,
-			reviews: [
-				{ text: 'Odličan film, kao tup gun ali sa ženskom glumicom', rating: 5, id: 1 },
-				{ text: 'All around me are familiar faces', rating: 4, id: 2 },
-			],
+			// reviews: [
+			// 	{ text: 'Odličan film, kao tup gun ali sa ženskom glumicom', rating: 5, id: 1 },
+			// 	{ text: 'All around me are familiar faces', rating: 4, id: 2 },
+			// ],
 		},
 		{
 			title: 'captain marvel 2',
@@ -95,10 +95,10 @@ export class ShowsService {
 			imageUrl: null,
 			averageRating: 4.5,
 			id: 8,
-			reviews: [
-				{ text: 'Odličan film, kao tup gun ali sa ženskom glumicom', rating: 5, id: 1 },
-				{ text: 'All around me are familiar faces', rating: 4, id: 2 },
-			],
+			// reviews: [
+			// 	{ text: 'Odličan film, kao tup gun ali sa ženskom glumicom', rating: 5, id: 1 },
+			// 	{ text: 'All around me are familiar faces', rating: 4, id: 2 },
+			// ],
 		},
 		{
 			title: 'captain marvel 3',
@@ -106,10 +106,10 @@ export class ShowsService {
 			imageUrl: null,
 			averageRating: 4.5,
 			id: 9,
-			reviews: [
-				{ text: 'Odličan film, kao tup gun ali sa ženskom glumicom', rating: 5, id: 1 },
-				{ text: 'All around me are familiar faces', rating: 4, id: 2 },
-			],
+			// reviews: [
+			// 	{ text: 'Odličan film, kao tup gun ali sa ženskom glumicom', rating: 5, id: 1 },
+			// 	{ text: 'All around me are familiar faces', rating: 4, id: 2 },
+			// ],
 		},
 	].map((show: IShow) => {
 		return new Show(show);
@@ -118,10 +118,6 @@ export class ShowsService {
 	public getShows(): Observable<Array<Show>> {
 		return of(this.shows).pipe(delay(200));
 	}
-
-	// public getShows(): Array<Show> {
-	// 	return this.shows;
-	// }
 
 	public getTopRatedShows(): Observable<Array<Show>> {
 		return of(

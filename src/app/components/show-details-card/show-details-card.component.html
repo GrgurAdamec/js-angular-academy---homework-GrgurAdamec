@@ -23,7 +23,7 @@
 			<app-review-form></app-review-form>
 		</div>
 
-		<div *ngFor="let review of show?.reviews">
+		<div *ngFor="let review of reviews | async">
 			<mat-card class="reviews">
 				<div class="photo"><img src="../../../assets/images/error.jpg" /></div>
 

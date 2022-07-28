@@ -17,8 +17,6 @@ export class ReviewFormComponent {
 
 	public onPostReviewClick(event: Event) {
 		event.preventDefault();
-		// console.log('Review: ' + this.form.controls.review.value);
-		// console.log('Rating: ' + this.form.controls.rating.value);
 		this.reviewService.saveReview(this.form.controls.review.value, this.form.controls.rating.value);
 	}
 }

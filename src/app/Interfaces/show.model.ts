@@ -7,14 +7,11 @@ export class Show {
 	public imageUrl: string | null;
 	public averageRating: number | null;
 	public id: number;
-	public reviews: IReview[] | null;
-
 	constructor(show: IShow) {
 		this.title = show.title;
 		this.description = show.description;
 		this.imageUrl = show.imageUrl;
 		this.averageRating = show.averageRating;
 		this.id = show.id;
-		this.reviews = show.reviews;
 	}
 }

@@ -1,7 +1,23 @@
 .container {
     min-height: 100vh;
-    background-color: lightblue;
+    width: 100%;
+    background-color: #1b004c;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+body {
+    background-color: #1b004c;
+    margin: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+    }
+}
+    

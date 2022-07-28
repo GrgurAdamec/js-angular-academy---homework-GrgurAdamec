@@ -10,4 +10,8 @@ export class ReviewService {
 	public saveReview(review: string | null, rating: string | null): void {
 		console.log('Review: ' + review + ', Rating: ' + rating);
 	}
+
+	public getEmail(): string | null {
+		return localStorage.getItem('userEmail');
+	}
 }

@@ -1,23 +1,18 @@
 <form [formGroup]="form">
 	<mat-card>
-		<mat-card-title>Post a review</mat-card-title>
-
 		<mat-card-actions>
-			<mat-form-field appearance="fill">
-				<mat-label>Write your review</mat-label>
-				<textarea matInput formControlName="review"></textarea>
-			</mat-form-field>
+			<!-- <mat-form-field appearance="fill"> -->
+			<input type="text" matInput formControlName="review" placeholder="Write your review..." />
+			<!-- </mat-form-field> -->
 
-			<mat-form-field appearance="fill">
-				<mat-label>Select rating out of 5</mat-label>
-				<mat-select formControlName="rating">
-					<mat-option value="1">1</mat-option>
-					<mat-option value="2">2</mat-option>
-					<mat-option value="3">3</mat-option>
-					<mat-option value="4">4</mat-option>
-					<mat-option value="5">5</mat-option>
-				</mat-select>
-			</mat-form-field>
+			<select formControlName="rating">
+				<option value="" disabled selected>Rate the show from 1 to 5</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
 
 			<button
 				type="submit"

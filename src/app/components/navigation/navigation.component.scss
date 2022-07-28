@@ -1,11 +1,22 @@
 button {
     padding: 10px;
     font-size: 20px;
-    border-radius: 5px;
     margin-left: 20px;
+    background-color: #1b004c;
+    color: white;
+    border: 0px;
+    margin: 10px;
+    display: block;
 }
 
 .active {
-    background-color: black;
+    background-color: #371687;
     color: white;
+    border-radius: 20px;
+}
+
+.logout {
+    margin-bottom: 50px;
+    position: absolute;
+    bottom: 0px;
 }

@@ -7,7 +7,7 @@
 	>
 		{{ link.title }}
 	</button>
-	<button (click)="authService.logOut()">Log out</button>
+	<button (click)="authService.logOut()" class="logout">Log out</button>
 </nav>
 
 <nav *ngIf="!authService.isLoggedIn()">

@@ -38,5 +38,9 @@ export class NavigationComponent {
 			url: 'top-rated-shows',
 			title: 'Top rated shows',
 		},
+		{
+			url: 'my-profile',
+			title: ' My profile',
+		},
 	];
 }

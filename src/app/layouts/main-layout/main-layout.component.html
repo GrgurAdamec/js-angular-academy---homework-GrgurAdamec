@@ -1,12 +1,12 @@
-<header>
-	<div class="nav centered">
-		<h1>Shows</h1>
-		<app-navigation></app-navigation>
-	</div>
-</header>
+<mat-sidenav-container>
+	<mat-sidenav mode="side" opened>
+		<div class="nav centered">
+			<img src="../../assets/images/Logo.png" />
+			<app-navigation></app-navigation>
+		</div>
+	</mat-sidenav>
 
-<body>
-	<div class="centered main">
+	<mat-sidenav-content>
 		<router-outlet></router-outlet>
-	</div>
-</body>
+	</mat-sidenav-content>
+</mat-sidenav-container>

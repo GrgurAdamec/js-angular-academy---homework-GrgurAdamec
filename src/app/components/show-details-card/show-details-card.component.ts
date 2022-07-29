@@ -22,4 +22,8 @@ export class ShowDetailsCardComponent implements OnInit {
 		this.authService.isLoggedIn();
 		this.reviews = this.reviewService.getReviewsById(this.show!.id);
 	}
+
+	public refreshReviews(reviews: Observable<Array<Review>>) {
+		this.reviews = reviews;
+	}
 }

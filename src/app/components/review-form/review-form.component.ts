@@ -1,8 +1,10 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { IReview } from 'app/Interfaces/review.interface';
 import { Review } from 'app/Interfaces/review.model';
 import { ISaveReview } from 'app/Interfaces/save-review.interface';
+import { ShowDetailComponent } from 'app/pages/show-detail/show-detail.component';
 import { ReviewService } from 'app/services/show-services/review.service';
 import { Observable } from 'rxjs';
 
@@ -15,8 +17,8 @@ export class ReviewFormComponent {
 	@Input()
 	public show_id!: number;
 
-	@Input()
-	public reviews!: Observable<Review[]>;
+	@Output()
+	reviewsEvent = new EventEmitter<Observable<Array<Review>>>();
 
 	constructor(private readonly reviewService: ReviewService, private readonly router: Router) {}
 
@@ -34,6 +36,11 @@ export class ReviewFormComponent {
 				show_id: this.show_id,
 			} as ISaveReview)
 			.subscribe();
-		this.reviews = this.reviewService.getReviewsById(this.show_id);
+		let reviews = this.reviewService.getReviewsById(this.show_id);
+		this.refreshReviews(reviews);
+	}
+
+	public refreshReviews(reviews: Observable<Array<Review>>) {
+		this.reviewsEvent.emit(reviews);
 	}
 }

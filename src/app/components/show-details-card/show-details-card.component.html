@@ -20,7 +20,7 @@
 
 	<mat-sidenav-content>
 		<div class="review-form" *ngIf="authService.isLoggedIn()">
-			<app-review-form [show_id]="show!.id" [reviews]="reviews"></app-review-form>
+			<app-review-form [show_id]="show!.id" (reviewsEvent)="refreshReviews($event)"></app-review-form>
 		</div>
 
 		<div *ngFor="let review of reviews | async">

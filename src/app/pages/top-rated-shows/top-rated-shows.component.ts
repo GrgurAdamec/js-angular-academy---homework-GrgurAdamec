@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Show } from 'app/Interfaces/show.model';
 import { ShowsService } from 'app/services/show-services/shows.service';
+import { Observable, of } from 'rxjs';
 
 @Component({
 	selector: 'app-top-rated-shows',
@@ -9,6 +10,5 @@ import { ShowsService } from 'app/services/show-services/shows.service';
 })
 export class TopRatedShowsComponent {
 	constructor(private readonly showsService: ShowsService) {}
-
 	public shows$ = this.showsService.getTopRatedShows();
 }

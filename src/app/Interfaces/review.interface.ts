@@ -1,5 +1,9 @@
+import { IUser } from './user.interface';
+
 export interface IReview {
-	text: string;
 	rating: number;
-	id: number;
+	comment: string;
+	show_id: number;
+	user: IUser;
+	image_url: string | null;
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { ILoginFormData } from 'app/Interfaces/login-form-data.interface';
 import { IRegisterFormData } from 'app/Interfaces/register-form-data.interface';
 import { IUser } from 'app/Interfaces/user.interface';
@@ -10,7 +11,7 @@ import { map, tap } from 'rxjs/operators';
 	providedIn: 'root',
 })
 export class AuthService {
-	constructor(private readonly http: HttpClient) {}
+	constructor(private readonly http: HttpClient, private readonly router: Router) {}
 
 	public register(data: IRegisterFormData): Observable<IUser> {
 		console.log(data);
@@ -44,5 +45,7 @@ export class AuthService {
 		sessionStorage.removeItem('access-token');
 		sessionStorage.removeItem('uid');
 		sessionStorage.removeItem('client');
+
+		this.router.navigate(['/login']);
 	}
 }

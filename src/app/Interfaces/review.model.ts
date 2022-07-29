@@ -1,13 +1,18 @@
 import { IReview } from './review.interface';
+import { IUser } from './user.interface';
 
 export class Review {
-	public text: string;
-	public rating: number;
-	public id: number;
+	rating: number;
+	comment: string;
+	show_id: number;
+	user: IUser;
+	image_url: string | null;
 
 	constructor(show: IReview) {
-		this.text = show.text;
 		this.rating = show.rating;
-		this.id = show.id;
+		this.comment = show.comment;
+		this.show_id = show.show_id;
+		this.user = show.user;
+		this.image_url = show.image_url;
 	}
 }

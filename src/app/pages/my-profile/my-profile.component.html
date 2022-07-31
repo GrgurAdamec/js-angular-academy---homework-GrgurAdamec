@@ -2,9 +2,15 @@
 	<h3>Email</h3>
 	<h2>{{ reviewService.getEmail() }}</h2>
 
-	<mat-card>
+	<div *ngIf="isSet()" class="img" (click)="remove()">
+		<img src="{{ imgUrl }}" />
+	</div>
+
+	<mat-card *ngIf="!isSet()">
 		<app-upload (fileChange)="onFileChange($event)"></app-upload>
 
-		<button mat-raised-button color="primary">Upload</button>
+		<mat-card-actions>
+			<button mat-button color="primary" (click)="onButtonClick()">Upload</button>
+		</mat-card-actions>
 	</mat-card>
 </content>

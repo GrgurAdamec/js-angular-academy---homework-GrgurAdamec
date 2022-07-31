@@ -29,9 +29,11 @@ export class LoginComponent {
 				console.log(res);
 				console.log(res.email);
 				console.log(res.id);
+				console.log(res.image_url);
 
 				sessionStorage.setItem('userId', res.id);
 				sessionStorage.setItem('userEmail', res.email);
+				sessionStorage.setItem('userImageUrl', res.image_url);
 				this.router.navigate(['']);
 			});
 	}

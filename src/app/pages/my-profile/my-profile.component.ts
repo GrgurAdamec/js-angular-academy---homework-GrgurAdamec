@@ -24,6 +24,14 @@ export class MyProfileComponent implements OnInit {
 		this.file = file;
 	}
 
+	public fileIsSet(): boolean {
+		if (this.file) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public onButtonClick() {
 		if (this.file) {
 			this.fileUploadService.uploadFile(this.file).subscribe((response) => {

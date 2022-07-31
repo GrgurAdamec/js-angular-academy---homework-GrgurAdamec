@@ -9,7 +9,8 @@
 	<mat-card *ngIf="!isSet()">
 		<app-upload (fileChange)="onFileChange($event)"></app-upload>
 
-		<mat-card-actions>
+		<mat-card-actions *ngIf="fileIsSet()">
+			<p>File is selected!</p>
 			<button mat-button color="primary" (click)="onButtonClick()">Upload</button>
 		</mat-card-actions>
 	</mat-card>

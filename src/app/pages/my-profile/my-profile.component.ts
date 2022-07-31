@@ -8,4 +8,8 @@ import { ReviewService } from 'app/services/show-services/review.service';
 })
 export class MyProfileComponent {
 	constructor(public readonly reviewService: ReviewService) {}
+
+	public upload() {
+		console.log('upload');
+	}
 }

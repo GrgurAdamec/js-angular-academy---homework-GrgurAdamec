@@ -10,10 +10,10 @@ export class ShowCardComponent {
 	constructor() {}
 
 	@Input()
-	imageUrl!: string | null;
+	image_url!: string | null;
 
 	@Input()
-	averageRating!: number | null;
+	average_rating!: number | null;
 
 	@Input()
 	title!: string;

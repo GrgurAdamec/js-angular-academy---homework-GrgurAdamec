@@ -1,12 +1,12 @@
 <mat-card class="show-card">
-	<div *ngIf="show?.imageUrl" class="img-div"><img [src]="show?.imageUrl" class="show-img" /></div>
+	<div *ngIf="show?.image_url" class="img-div"><img [src]="show?.image_url" class="show-img" /></div>
 	<div class="half-div">
 		<mat-card-title>{{ show?.title }}</mat-card-title>
 		<br />
-		<div *ngIf="show?.averageRating">
-			<span><img src="../../assets/images/Vector.png" /> {{ show?.averageRating }}/5</span>
+		<div *ngIf="show?.average_rating">
+			<span><img src="../../assets/images/Vector.png" /> {{ show?.average_rating }}/5</span>
 		</div>
-		<div *ngIf="!show?.averageRating"><span>Rating not available</span></div>
+		<div *ngIf="!show?.average_rating"><span>Rating not available</span></div>
 	</div>
 	<div class="half-div">
 		<p>{{ show?.description }}</p>
@@ -23,17 +23,17 @@
 			<app-review-form></app-review-form>
 		</div>
 
-		<div *ngFor="let review of show?.reviews">
+		<div *ngFor="let review of reviews | async">
 			<mat-card class="reviews">
-				<div class="photo"><img src="../../../assets/images/error.jpg" /></div>
+				<div class="photo"><img src="{{ review.image_url }}" /></div>
 
 				<div class="rating">
-					<p>email@example.com</p>
+					<p>{{ review.user.email }}</p>
 					<span class="half-span"> {{ review.rating }}</span>
 				</div>
 
 				<div class="text">
-					<span class="half-span">{{ review.text }}</span>
+					<span class="half-span">{{ review.comment }}</span>
 				</div>
 			</mat-card>
 		</div>

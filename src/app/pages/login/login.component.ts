@@ -27,11 +27,11 @@ export class LoginComponent {
 			} as ILoginFormData)
 			.subscribe((res) => {
 				console.log(res);
-				console.log(res.user.email);
-				console.log(res.user.id);
+				console.log(res.email);
+				console.log(res.id);
 
-				localStorage.setItem('userId', res.user.id);
-				localStorage.setItem('userEmail', res.user.email);
+				sessionStorage.setItem('userId', res.id);
+				sessionStorage.setItem('userEmail', res.email);
 				this.router.navigate(['']);
 			});
 	}

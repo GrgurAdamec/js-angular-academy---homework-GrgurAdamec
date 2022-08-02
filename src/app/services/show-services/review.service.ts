@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IReview } from 'app/Interfaces/review.interface';
 import { Review } from 'app/Interfaces/review.model';
+import { ISaveReview } from 'app/Interfaces/save-review.interface';
 import { map, of } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 
@@ -15,8 +17,9 @@ export class ReviewService {
 		.set('access-token', sessionStorage.getItem('access-token') as string)
 		.set('uid', sessionStorage.getItem('uid') as string);
 
-	public saveReview(review: string | null, rating: string | null): void {
-		console.log('Review: ' + review + ', Rating: ' + rating);
+	public saveReview(data: ISaveReview): Observable<IReview> {
+		console.log(data);
+		return this.http.post<IReview>('https://tv-shows.infinum.academy/reviews', data, { headers: this.headers });
 	}
 
 	public getReviewsById(id: number): Observable<Array<Review>> {

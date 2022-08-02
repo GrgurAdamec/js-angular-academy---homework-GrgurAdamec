@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Review } from 'app/Interfaces/review.model';
 import { Show } from 'app/Interfaces/show.model';
 import { AuthService } from 'app/services/show-services/auth/auth.service';
@@ -21,5 +21,9 @@ export class ShowDetailsCardComponent implements OnInit {
 	ngOnInit() {
 		this.authService.isLoggedIn();
 		this.reviews = this.reviewService.getReviewsById(this.show!.id);
+	}
+
+	public refreshReviews(reviews: Observable<Array<Review>>) {
+		this.reviews = reviews;
 	}
 }

@@ -41,6 +41,8 @@ export class ReviewFormComponent {
 	}
 
 	public refreshReviews(reviews: Observable<Array<Review>>) {
-		this.reviewsEvent.emit(reviews);
+		setTimeout(() => {
+			this.reviewsEvent.emit(reviews);
+		}, 100);
 	}
 }

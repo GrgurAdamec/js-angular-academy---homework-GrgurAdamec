@@ -25,7 +25,7 @@
 
 		<div *ngFor="let review of reviews | async">
 			<mat-card class="reviews">
-				<div class="photo"><img src="{{ review.image_url }}" /></div>
+				<div class="photo"><img src="{{ review.user.image_url }}" /></div>
 
 				<div class="rating">
 					<p>{{ review.user.email }}</p>

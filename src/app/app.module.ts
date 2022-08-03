@@ -13,6 +13,7 @@ import { AuthLayoutModule } from './layouts/auth-layout/auth-layout.module';
 import { LoginModule } from './pages/login/login.module';
 import { RegisterModule } from './pages/register/register.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MyProfileModule } from './pages/my-profile/my-profile.module';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 		LoginModule,
 		RegisterModule,
 		HttpClientModule,
+		MyProfileModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

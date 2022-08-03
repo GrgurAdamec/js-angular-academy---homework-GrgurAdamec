@@ -1,5 +1,17 @@
 <content>
 	<h3>Email</h3>
 	<h2>{{ reviewService.getEmail() }}</h2>
-	<img src="../../assets/images/Rectangle 65.png" />
+
+	<div *ngIf="isSet()" class="img" (click)="remove()">
+		<img src="{{ imgUrl }}" />
+	</div>
+
+	<mat-card *ngIf="!isSet()">
+		<app-upload (fileChange)="onFileChange($event)"></app-upload>
+
+		<mat-card-actions *ngIf="fileIsSet()">
+			<p>File is selected!</p>
+			<button mat-button color="primary" (click)="onButtonClick()">Upload</button>
+		</mat-card-actions>
+	</mat-card>
 </content>
